@@ -10,7 +10,6 @@ public class Cliente {
 
     // Constructor completo
     Cliente(String nombre, String apellidos, String cedula, String sexo, String ubicacion) {
-
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.cedula = cedula;
@@ -19,13 +18,11 @@ public class Cliente {
     }
 
 
-    // Constructor sin sexo
+    // Constructor que inicializa todos los atributos menos sexo
     Cliente(String nombre, String apellidos, String cedula, String ubicacion) {
-
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.cedula = cedula;
-        this.sexo = null;
         this.ubicacion = ubicacion;
     }
 
@@ -36,11 +33,13 @@ public class Cliente {
     }
 
 
-    // Método para adquirir una suscripción
+    // Método suscribirse
     void suscribirse(Suscripcion suscripcion) {
 
-        System.out.println(nombre + " " + apellidos
-                + " adquirió una suscripción "
-                + suscripcion.tipo + ".");
+        System.out.println(
+                nombre + " " + apellidos
+                        + " adquirió una suscripción "
+                        + suscripcion.tipo + "."
+        );
     }
 }
