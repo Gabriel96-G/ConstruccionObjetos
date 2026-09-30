@@ -1,45 +1,126 @@
-public class Cliente {
+//public class Cliente {
 
     // Atributos
-    String nombre;
-    String apellidos;
-    String cedula;
-    String sexo;
-    String ubicacion;
+   // private String nombre;
+   // private String apellidos;
+   // private String cedula;
+   // private String sexo;
+   // private String ubicacion;
 
 
     // Constructor completo
-    Cliente(String nombre, String apellidos, String cedula, String sexo, String ubicacion) {
+  //  public Cliente(String nombre, String apellidos, String cedula, String sexo, String ubicacion) {
+     //   this.nombre = nombre;
+      //  this.apellidos = apellidos;
+      //  this.cedula = cedula;
+      //  this.sexo = sexo;
+      //  this.ubicacion = ubicacion;
+   // }
+
+
+    // Constructor que inicializa todos los atributos menos sexo
+    //public Cliente(String nombre, String apellidos, String cedula, String ubicacion) {
+      //  this.nombre = nombre;
+      //  this.apellidos = apellidos;
+      //  this.cedula = cedula;
+       // this.ubicacion = ubicacion;
+   // }
+
+
+    // Constructor por defecto
+   // Cliente() {
+
+    //}
+
+
+    // Método suscribirse
+    //void suscribirse(Suscripcion suscripcion) {
+
+        //System.out.println(
+              //  nombre + " " + apellidos
+                 //       + " adquirió una suscripción "
+                   //     + suscripcion.tipo + "."
+      //  );
+   // }
+//}
+
+//////////////////////////////////////////////
+
+public class Cliente {
+
+    // Atributos
+    private String nombre;
+    private String apellido;
+    private String cedula;
+    private char sexo;
+    private String ubicacion;
+
+    // Métodos
+    // Constructor completo
+    public Cliente (String nombre,String apellido,String cedula,char sexo,String ubicacion) {
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido = apellido;
         this.cedula = cedula;
         this.sexo = sexo;
         this.ubicacion = ubicacion;
     }
 
-
-    // Constructor que inicializa todos los atributos menos sexo
-    Cliente(String nombre, String apellidos, String cedula, String ubicacion) {
+    // Constructor por sobrecarga
+    public Cliente (String nombre,String apellido,String cedula,String ubicacion) {
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido = apellido;
         this.cedula = cedula;
         this.ubicacion = ubicacion;
     }
 
-
     // Constructor por defecto
-    Cliente() {
-
-    }
-
+    Cliente (){}
 
     // Método suscribirse
     void suscribirse(Suscripcion suscripcion) {
-
-        System.out.println(
-                nombre + " " + apellidos
-                        + " adquirió una suscripción "
-                        + suscripcion.tipo + "."
-        );
+        System.out.println(nombre + " " + apellido + " adquirió una suscripción " + suscripcion.getTipo() + ".");
     }
+
+    // Getters - Devuelve información
+    public String getNombre(){
+        return nombre;
+    }
+
+    public String getApellido(){
+        return apellido;
+    }
+
+    public String getCedula(){
+        return cedula;
+    }
+
+    public char getSexo(){
+        return sexo;
+    }
+
+    public String getUbicacion(){
+        return ubicacion;
+    }
+
+    // Setters - Agrega valor y lo cambia
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido){
+        this.apellido = apellido;
+    }
+
+    public void setCedula(String cedula){
+        this.cedula = cedula;
+    }
+
+    public void setSexo(char sexo){
+        this.sexo = sexo;
+    }
+
+    public void setUbicacion(String ubicacion){
+        this.ubicacion = ubicacion;
+    }
+
 }
