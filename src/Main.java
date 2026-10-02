@@ -110,6 +110,8 @@ public class Main {
         cliente1.suscribirse(suscripcion1);
         cliente2.suscribirse(suscripcion2);
         cliente3.suscribirse(new Suscripcion("Avanzada", 10000, (byte)3)); // suscripción anónima
+
+        System.out.println(cliente1 + "\n" + suscripcion1);
     }
 
 }
